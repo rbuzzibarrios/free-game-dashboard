@@ -393,6 +393,9 @@
   <input type="hidden" #selection>
 
   <div class="card-container">
+    <ng-container>
+      <button class="col-8 btn btn-info">My button BBB</button>
+    </ng-container>
     <button class="card card-small" (click)="selection.value = 'component'" tabindex="0">
       <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg>
       <span>New Component</span>
@@ -480,5 +483,3 @@
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 <!-- * * * * * * * * * * End of Placeholder * * * * * * * * * * * -->
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-
-<router-outlet></router-outlet>
