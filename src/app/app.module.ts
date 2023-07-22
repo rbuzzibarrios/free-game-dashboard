@@ -5,11 +5,11 @@ import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap'
 import { GameModule } from "./game/game.module";
 import { FaIconLibrary, FontAwesomeModule } from '@fortawesome/angular-fontawesome'
-import { faHome } from "@fortawesome/free-solid-svg-icons/faHome"
+import { faHome } from "@fortawesome/free-solid-svg-icons/faHome";
 
 @NgModule({
   declarations: [
-    AppComponent,
+    AppComponent
   ],
   imports: [
     BrowserModule,

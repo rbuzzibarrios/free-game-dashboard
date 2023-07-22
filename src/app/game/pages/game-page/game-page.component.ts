@@ -1,6 +1,6 @@
-import {Component, OnInit} from '@angular/core'
-import {Game} from "../../../core/models/game"
-import {GameService} from "../../../core/services/game/game.service"
+import { Component, OnInit } from '@angular/core'
+import { Game } from "../../../core/models/game"
+import { GameService } from "../../../core/services/game/game.service"
 
 @Component({
   selector: 'app-game-page',
@@ -16,7 +16,6 @@ export class GamePageComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.gameService.getGames().subscribe((games) => this.gameList = games)
+    this.gameService.getGames().subscribe((games) => this.gameList = games.slice(0, 10))
   }
-
 }
