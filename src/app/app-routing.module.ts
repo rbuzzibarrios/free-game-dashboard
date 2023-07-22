@@ -5,7 +5,7 @@ import {GameRoutingModule} from "./game/game-routing.module"
 const routes: Routes = []
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes), GameRoutingModule],
+  imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

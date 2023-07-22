@@ -1,7 +1,29 @@
-Home Page
-<ul>
-    <li><a routerLink="games">Games</a></li>
-</ul>
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-<router-outlet>
-</router-outlet>
+    <title>Hello, world!</title>
+</head>
+<body>
+<header class="container">
+    <nav class="navbar navbar-expand-sm navbar-dark bg-primary">
+        <a class="button navbar-brand">
+            <fa-icon [icon]="faHome"></fa-icon>
+        </a>
+        <a class="button navbar-brand" routerLink="/games">Games</a>
+        <a class="navbar-brand" routerLink="/games">Search</a>
+    </nav>
+</header>
+
+<section id="content" class="container">
+    <div class="mt-2">
+        <router-outlet>
+        </router-outlet>
+    </div>
+</section>
+
+</body>
+</html>
+

@@ -5,7 +5,8 @@ import {Game} from "../../models/game"
 @Injectable()
 export class GameService {
 
-  private gameApiUrl = 'https://cors-anywhere.herokuapp.com/https://www.freetogame.com/api/'
+  private proxyAuthorizeCors = 'https://cors-anywhere.herokuapp.com/';
+  private gameApiUrl = `${this.proxyAuthorizeCors}https://www.freetogame.com/api/`;
 
   constructor(private http: HttpClient) {
   }
