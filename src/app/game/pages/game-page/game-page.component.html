@@ -1,5 +1,14 @@
-<div class="bg-success text-black-50">Games</div>
+<div class="bg-dark h3 mt-2 mb-2 border-dark text-primary container-lg container-xl">Games List</div>
 
-<div *ngFor="let game of gameList">
-    {{ game.id }} - {{ game.title }}
+<div class="row justify-content-center">
+    <ng-container *ngFor="let game of gameList">
+        <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
+            <app-game-card
+                    [image_url]="game.thumbnail"
+                    [title]="game.title"
+                    [description]="game.short_description"
+            >
+            </app-game-card>
+        </div>
+    </ng-container>
 </div>
