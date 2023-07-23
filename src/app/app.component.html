@@ -1,29 +1,18 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <title>Free Games | Dashboard</title>
-</head>
-<body>
 <header class="container-lg container-xl">
     <nav class="navbar navbar-expand-sm navbar-dark bg-primary">
-        <a class="button navbar-brand">
+        <a class="button navbar-brand" routerLink="/">
             <fa-icon [icon]="faHome"></fa-icon>
         </a>
         <a class="button navbar-brand" routerLink="/games">Games</a>
         <a class="navbar-brand" routerLink="/games">Search</a>
     </nav>
+
 </header>
 
-<section id="content" class="container-lg container-xl">
-    <div class="mt-2">
+<section id="content" class="container-lg container-xl mb-5">
+    <div class="mt-2 mb-5">
         <router-outlet>
         </router-outlet>
     </div>
 </section>
-
-</body>
-</html>
 

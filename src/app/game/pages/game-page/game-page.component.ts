@@ -12,10 +12,9 @@ export class GamePageComponent implements OnInit {
 
   gameList: Game[] = []
 
-  constructor(private gameService: GameService) {
-  }
+  constructor(private gameService: GameService) { }
 
   ngOnInit() {
-    this.gameService.getGames().subscribe((games) => this.gameList = games.slice(0, 10))
+    this.gameService.getGames().subscribe((games) => this.gameList = games.slice(0, 9))
   }
 }
