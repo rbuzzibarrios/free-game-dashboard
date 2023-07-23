@@ -1,8 +1,8 @@
 import {Injectable} from '@angular/core'
 import {HttpClient} from '@angular/common/http'
 import {Game} from "../../models/game"
-import {GameFilters} from "../../models/game-filters"
-import {filter, map, tap} from "rxjs"
+import { GameFilters } from "../../models/game-filters"
+import { map } from "rxjs"
 
 @Injectable()
 export class GameService {
