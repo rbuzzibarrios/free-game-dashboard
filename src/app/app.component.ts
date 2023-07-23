@@ -7,6 +7,6 @@ import { faHome } from '@fortawesome/free-solid-svg-icons';
   styleUrls: ['./app.component.sass']
 })
 export class AppComponent {
-  title = 'free-game-dashboard';
+  title = 'Free Games | Dashboard';
   faHome = faHome;
 }
