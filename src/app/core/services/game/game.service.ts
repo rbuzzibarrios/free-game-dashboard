@@ -2,7 +2,7 @@ import {Injectable} from '@angular/core'
 import {HttpClient} from '@angular/common/http'
 import {Game} from "../../models/game"
 import { GameFilters } from "../../models/game-filters"
-import { map } from "rxjs"
+import {map, tap} from "rxjs"
 
 @Injectable()
 export class GameService {
@@ -11,6 +11,10 @@ export class GameService {
   private gameApiUrl = `${this.proxyAuthorizeCors}https://www.freetogame.com/api/`;
 
   constructor(private http: HttpClient) {
+  }
+
+  getApiUrl() {
+    return this.gameApiUrl;
   }
 
   getGames() {
@@ -38,6 +42,14 @@ export class GameService {
 
     return this.getGames().pipe(
         map(games => games.filter(applyFilters))
+    );
+  }
+
+  getGenreGames() {
+    const applyGenreMap = (game: Game) => game.genre?.trim()
+
+    return this.getGames().pipe(
+        map(games => [...new Set(games.map(applyGenreMap))]),
     );
   }
 }
