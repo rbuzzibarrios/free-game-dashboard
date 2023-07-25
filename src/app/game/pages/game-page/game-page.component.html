@@ -1,6 +1,10 @@
 <div class="bg-dark h3 mt-2 mb-2 border-dark text-primary container-lg container-xl">Games List</div>
 
-<app-game-filter-form [filters]="gameFilters"></app-game-filter-form>
+<app-game-filter-form
+        [filters]="gameFilters"
+        (applyFilters)="searchGamesByFilters($event)"
+>
+</app-game-filter-form>
 
 <div class="row row-cols-md-3 justify-content-center">
     <ng-container *ngFor="let game of gameList">

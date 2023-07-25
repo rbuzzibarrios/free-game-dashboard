@@ -5,13 +5,15 @@ import {GamePageComponent} from "./pages/game-page/game-page.component"
 import {GameRoutingModule} from "./game-routing.module"
 import {GameCardComponent} from "./components/game-card/game-card.component"
 import {GameFilterFormComponent} from "./components/game-filter-form/game-filter-form.component"
+import {ReactiveFormsModule} from "@angular/forms"
 
 @NgModule({
   declarations: [GamePageComponent, GameCardComponent, GameFilterFormComponent],
   imports: [
     CommonModule,
     CoreModule,
-    GameRoutingModule
+    GameRoutingModule,
+    ReactiveFormsModule
   ],
   exports: [GamePageComponent, GameFilterFormComponent]
 })

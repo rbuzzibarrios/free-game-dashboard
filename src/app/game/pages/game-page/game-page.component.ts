@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core'
+import {Component, OnInit} from '@angular/core'
 import { Game } from "../../../core/models/game"
 import { GameService } from "../../../core/services/game/game.service"
 import {GameFilters} from "../../../core/models/game-filters"
@@ -19,5 +19,11 @@ export class GamePageComponent implements OnInit {
 
   ngOnInit() {
     this.gameService.getGames().subscribe((games) => this.gameList = games.slice(0, 9))
+  }
+
+  searchGamesByFilters(filters: GameFilters) {
+    return this.gameService
+        .search(filters as GameFilters)
+        .subscribe(filteredGameList => this.gameList = filteredGameList)
   }
 }

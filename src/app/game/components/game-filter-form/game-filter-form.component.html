@@ -1,5 +1,5 @@
 <div>
-    <form>
+    <form [formGroup]="gameFilterForm" (submit)="onApplyFilters($event)">
         <div class="form-row align-items-center mb-4">
             <div class="col-3">
                 <label for="title" class="sr-only">Title</label>
@@ -9,12 +9,13 @@
                         name="title"
                         type="text"
                         placeholder="Title"
-                        [value]="filters?.title"
+                        formControlName="title"
                 />
             </div>
             <div class="col-3">
                 <ng-select
                         [items]="platformList"
+                        formControlName="platform"
                 >
                 </ng-select>
             </div>
@@ -22,12 +23,17 @@
             <div class="col-3">
                 <ng-select
                         [items]="genreList"
+                        formControlName="genre"
                 >
                 </ng-select>
             </div>
-            <!--        </div>-->
             <div class="col-3 text-right">
-                <button type="submit" class="btn btn btn-primary">Apply filters</button>
+                <button
+                        type="submit"
+                        class="btn btn-primary"
+                >
+                    Apply filters
+                </button>
             </div>
         </div>
     </form>

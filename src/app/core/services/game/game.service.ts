@@ -2,7 +2,7 @@ import {Injectable} from '@angular/core'
 import {HttpClient} from '@angular/common/http'
 import {Game} from "../../models/game"
 import { GameFilters } from "../../models/game-filters"
-import {map, tap} from "rxjs"
+import {map} from "rxjs"
 
 @Injectable()
 export class GameService {
@@ -33,14 +33,18 @@ export class GameService {
         restrictions = restrictions && game.genre === filters?.genre
       }
 
-      if (filters?.platform) {
-        restrictions = restrictions && game.platform === filters?.platform
-      }
-
       return restrictions
     })
 
-    return this.getGames().pipe(
+    let apiUrlSearchGameByPlatform = `${this.getApiUrl()}games`
+
+    if (filters?.platform) {
+      const searchPlatformQueryFilter = `?platform=${filters?.platform}`;
+
+      apiUrlSearchGameByPlatform = apiUrlSearchGameByPlatform.concat(searchPlatformQueryFilter)
+    }
+
+    return this.http.get<Game []>(apiUrlSearchGameByPlatform).pipe(
         map(games => games.filter(applyFilters))
     );
   }
