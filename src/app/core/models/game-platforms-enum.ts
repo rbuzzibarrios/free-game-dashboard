@@ -1,3 +1,3 @@
 export enum GamePlatformsEnum {
-    BROWSER = "BROWSER", PC = "PC", ALL = "ALL"
+    BROWSER = "browser", PC = "pc", ALL = "all"
 }

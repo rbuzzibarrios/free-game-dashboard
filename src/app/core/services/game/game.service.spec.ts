@@ -1,9 +1,9 @@
 import {TestBed} from '@angular/core/testing'
 
 import {GameService} from './game.service'
-import {HttpClient, HttpHandler} from "@angular/common/http"
+import {HttpClient} from "@angular/common/http"
 import {Game} from "../../models/game"
-import {Observable, of} from "rxjs"
+import {of} from "rxjs"
 import {GameFilters} from "../../models/game-filters"
 import {HttpClientTestingModule, HttpTestingController} from "@angular/common/http/testing"
 
@@ -126,7 +126,7 @@ describe('GameService', () => {
         const service = TestBed.inject(GameService)
         const httpTestingController = TestBed.inject(HttpTestingController);
 
-        let genresList: (string | undefined)[] = [];
+        const genresList: (string | undefined)[] = [];
 
         service.getGenreGames().subscribe(genresResponse => {
           console.log('genresResponse', genresResponse)
