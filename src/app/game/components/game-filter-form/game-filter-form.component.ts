@@ -33,7 +33,7 @@ export class GameFilterFormComponent implements OnInit {
     this.gameService.getGenreGames().subscribe(genres =>  this.genreList = genres)
   }
 
-  onApplyFilters(e: any): void {
+  onApplyFilters(): void {
     this.applyFilters.emit(this.gameFilterForm.value as GameFilters);
   }
 }
