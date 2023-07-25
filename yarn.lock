@@ -1568,6 +1568,13 @@
   dependencies:
     tslib "^2.3.0"
 
+"@ng-select/ng-select@^11.0.0":
+  version "11.0.0"
+  resolved "https://registry.yarnpkg.com/@ng-select/ng-select/-/ng-select-11.0.0.tgz#0b83d5527b5a2b1441ddac435c2429fb273e2dd7"
+  integrity sha512-zuqZ/9LVV4nxiOFWo0hWncTqDV2QcUcUqZyMa4kKZxJALRmPumo4+BXca1h1KY6SHYFJeINIriK93LApeMSwQQ==
+  dependencies:
+    tslib "^2.3.1"
+
 "@ngtools/webpack@16.1.4":
   version "16.1.4"
   resolved "https://registry.yarnpkg.com/@ngtools/webpack/-/webpack-16.1.4.tgz#2e29bdf590c8b5505ffd744f12075b14ed972fc8"
@@ -6871,6 +6878,11 @@ tslib@^2.1.0, tslib@^2.3.0, tslib@^2.4.0, tslib@^2.4.1:
   version "2.6.0"
   resolved "https://registry.yarnpkg.com/tslib/-/tslib-2.6.0.tgz#b295854684dbda164e181d259a22cd779dcd7bc3"
   integrity sha512-7At1WUettjcSRHXCyYtTselblcHl9PJFFVKiCAy/bY97+BPZXSQ2wbq0P9s8tK2G7dFQfNnlJnPAiArVBVBsfA==
+
+tslib@^2.3.1:
+  version "2.6.1"
+  resolved "https://registry.yarnpkg.com/tslib/-/tslib-2.6.1.tgz#fd8c9a0ff42590b25703c0acb3de3d3f4ede0410"
+  integrity sha512-t0hLfiEKfMUoqhG+U1oid7Pva4bbDPHYfJNiB7BiIjRkj1pyC++4N3huJfqY6aRH6VTB0rvtzQwjM4K6qpfOig==
 
 tsutils@^3.21.0:
   version "3.21.0"

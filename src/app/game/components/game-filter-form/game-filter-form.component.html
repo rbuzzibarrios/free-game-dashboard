@@ -1,0 +1,35 @@
+<div>
+    <form>
+        <div class="form-row align-items-center mb-4">
+            <div class="col-3">
+                <label for="title" class="sr-only">Title</label>
+                <input
+                        class="form-control"
+                        id="title"
+                        name="title"
+                        type="text"
+                        placeholder="Title"
+                        [value]="filters?.title"
+                />
+            </div>
+            <div class="col-3">
+                <ng-select
+                        [items]="platformList"
+                >
+                </ng-select>
+            </div>
+
+            <div class="col-3">
+                <ng-select
+                        [items]="genreList"
+                >
+                </ng-select>
+            </div>
+            <!--        </div>-->
+            <div class="col-3 text-right">
+                <button type="submit" class="btn btn btn-primary">Apply filters</button>
+            </div>
+        </div>
+    </form>
+</div>
+
