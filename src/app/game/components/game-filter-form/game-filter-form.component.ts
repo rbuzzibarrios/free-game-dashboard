@@ -44,6 +44,6 @@ export class GameFilterFormComponent implements OnInit {
   }
 
   formHasFilters() {
-    return !this.gameFilterForm.dirty
+    return this.gameFilterForm.dirty
   }
 }
