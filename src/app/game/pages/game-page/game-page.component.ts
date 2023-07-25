@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core'
 import { Game } from "../../../core/models/game"
 import { GameService } from "../../../core/services/game/game.service"
+import {GameFilters} from "../../../core/models/game-filters"
 
 @Component({
   selector: 'app-game-page',
@@ -11,6 +12,8 @@ import { GameService } from "../../../core/services/game/game.service"
 export class GamePageComponent implements OnInit {
 
   gameList: Game[] = []
+
+  gameFilters: GameFilters | undefined = undefined
 
   constructor(private gameService: GameService) { }
 

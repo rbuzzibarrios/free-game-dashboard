@@ -1,6 +1,6 @@
 export interface Game {
     id: number,
-    title: string,
+    title?: string,
     thumbnail: string,
     short_description: string,
     game_url: string,

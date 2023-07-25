@@ -1,8 +1,10 @@
 <div class="bg-dark h3 mt-2 mb-2 border-dark text-primary container-lg container-xl">Games List</div>
 
-<div class="row justify-content-center">
+<app-game-filter-form [filters]="gameFilters"></app-game-filter-form>
+
+<div class="row row-cols-md-3 justify-content-center">
     <ng-container *ngFor="let game of gameList">
-        <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
+        <div class="col mb-4">
             <app-game-card
                     [image_url]="game.thumbnail"
                     [title]="game.title"
