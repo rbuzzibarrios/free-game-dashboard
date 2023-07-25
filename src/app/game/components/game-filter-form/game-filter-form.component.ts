@@ -18,10 +18,10 @@ export class GameFilterFormComponent implements OnInit {
   @Input({required: true}) filters: GameFilters | undefined = {title: '', platform: '', genre: ''}
   @Output() applyFilters: EventEmitter<GameFilters> = new EventEmitter<GameFilters>()
 
-  gameFilterForm = this.formBuilder.group<GameFilters>({
+  gameFilterForm = this.formBuilder.group({
     title: '',
-    genre: '',
-    platform: ''
+    genre: [undefined],
+    platform: [undefined]
   })
 
   constructor(
@@ -35,5 +35,15 @@ export class GameFilterFormComponent implements OnInit {
 
   onApplyFilters(): void {
     this.applyFilters.emit(this.gameFilterForm.value as GameFilters);
+  }
+
+  onResetFilters() {
+    this.gameFilterForm.reset()
+
+    this.onApplyFilters()
+  }
+
+  formHasFilters() {
+    return !this.gameFilterForm.dirty
   }
 }

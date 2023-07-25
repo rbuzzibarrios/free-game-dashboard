@@ -1,5 +1,9 @@
 <div>
-    <form [formGroup]="gameFilterForm" (submit)="onApplyFilters()">
+    <form
+            [formGroup]="gameFilterForm"
+            (submit)="onApplyFilters()"
+            (reset)="onResetFilters()"
+    >
         <div class="form-row align-items-center mb-4">
             <div class="col-3">
                 <label for="title" class="sr-only">Title</label>
@@ -16,6 +20,7 @@
                 <ng-select
                         [items]="platformList"
                         formControlName="platform"
+                        placeholder="Select a platform"
                 >
                 </ng-select>
             </div>
@@ -24,15 +29,25 @@
                 <ng-select
                         [items]="genreList"
                         formControlName="genre"
+                        placeholder="Select a genre"
+
                 >
                 </ng-select>
             </div>
             <div class="col-3 text-right">
                 <button
                         type="submit"
-                        class="btn btn-primary"
+                        class="btn btn-primary mr-2"
+                        [disabled]="formHasFilters()"
                 >
                     Apply filters
+                </button>
+                <button
+                        type="reset"
+                        class="btn btn-primary"
+                        [disabled]="formHasFilters()"
+                >
+                    Reset
                 </button>
             </div>
         </div>
