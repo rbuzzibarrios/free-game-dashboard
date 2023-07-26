@@ -7,9 +7,16 @@ import {GameCardComponent} from "./components/game-card/game-card.component"
 import {GameFilterFormComponent} from "./components/game-filter-form/game-filter-form.component"
 import {ReactiveFormsModule} from "@angular/forms"
 import {GameViewPageComponent} from "./pages/game-view-page/game-view-page.component"
+import {NgSelectComponent} from "@ng-select/ng-select"
 
 @NgModule({
-  declarations: [GamePageComponent, GameCardComponent, GameFilterFormComponent, GameViewPageComponent],
+  declarations: [
+    GamePageComponent,
+    GameCardComponent,
+    GameFilterFormComponent,
+    GameViewPageComponent,
+    NgSelectComponent,
+  ],
   imports: [
     CommonModule,
     CoreModule,

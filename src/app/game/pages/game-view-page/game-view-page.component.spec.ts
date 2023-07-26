@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { GameViewPageComponent } from './game-view-page.component';
+import {HttpClient, HttpHandler} from "@angular/common/http"
 
 describe('GameViewPageComponent', () => {
   let component: GameViewPageComponent;
@@ -8,7 +9,8 @@ describe('GameViewPageComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [GameViewPageComponent]
+      declarations: [GameViewPageComponent],
+      providers: [HttpClient, HttpHandler]
     });
     fixture = TestBed.createComponent(GameViewPageComponent);
     component = fixture.componentInstance;

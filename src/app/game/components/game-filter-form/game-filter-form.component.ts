@@ -2,7 +2,7 @@ import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core'
 import {GameFilters} from "../../../core/models/game-filters"
 import {GamePlatformsEnum} from "../../../core/models/game-platforms-enum"
 import {GameService} from "../../../core/services/game/game.service"
-import {FormBuilder} from "@angular/forms"
+import {FormBuilder, FormGroup} from "@angular/forms"
 
 @Component({
   selector: 'app-game-filter-form',
@@ -18,7 +18,7 @@ export class GameFilterFormComponent implements OnInit {
   @Input({required: true}) filters: GameFilters | undefined = {title: '', platform: '', genre: ''}
   @Output() applyFilters: EventEmitter<GameFilters> = new EventEmitter<GameFilters>()
 
-  gameFilterForm = this.formBuilder.group({
+  gameFilterForm: FormGroup = this.formBuilder.group({
     title: '',
     genre: [undefined],
     platform: [undefined]
