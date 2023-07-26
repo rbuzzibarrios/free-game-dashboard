@@ -10,10 +10,7 @@ export class GameService {
   private gameApiUrl = environment.apiFreeGameUrl;
 
   constructor(private http: HttpClient) {
-
-    if (!environment.production) {
-      this.gameApiUrl = `${environment.proxyUrlCORSAnyWhere}${environment.apiFreeGameUrl}`
-    }
+    this.gameApiUrl = `${environment.proxyUrlCORSAnyWhere}${environment.apiFreeGameUrl}`
   }
 
   getApiUrl() {
