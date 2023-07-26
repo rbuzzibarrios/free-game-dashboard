@@ -1,0 +1,134 @@
+<div class="bg-dark h3 mt-2 mb-2 border-dark text-primary container-lg container-xl">Games Details</div>
+
+<div class="container">
+
+    <div class="row row-cols-2 border-top border-left border-right">
+        <div class="col-3">
+            <div class="font-weight-bold">
+                Title
+            </div>
+        </div>
+        <div class="col-3">
+            <div class="">
+                {{ game?.title }}
+            </div>
+        </div>
+
+    </div>
+    <div class="row row-cols-2 border-top border-left border-right">
+        <div class="col-3">
+            <div class="font-weight-bold">
+                Thumbnail
+            </div>
+        </div>
+        <div class="col-3">
+            <div class="pt-2 pb-2">
+                <img [src]="game?.thumbnail">
+            </div>
+        </div>
+
+    </div>
+    <div class="row row-cols-2 border-top border-left border-right">
+        <div class="col-3">
+            <div class="font-weight-bold">
+                Short description
+            </div>
+        </div>
+        <div class="col-3">
+            <div>
+                {{ game?.short_description }}
+            </div>
+        </div>
+
+    </div>
+    <div class="row row-cols-2 border-top border-left border-right">
+        <div class="col-3">
+            <div class="font-weight-bold">
+                URL
+            </div>
+        </div>
+        <div class="col-9">
+            <div>
+                <a class="font-weight-bold" [href]="game?.game_url">{{ game?.game_url }}</a>
+            </div>
+        </div>
+
+    </div>
+    <div class="row row-cols-2 border-top border-left border-right">
+        <div class="col-3">
+            <div class="font-weight-bold">
+                Genre
+            </div>
+        </div>
+        <div class="col-3">
+            <div>
+                {{ game?.genre }}
+            </div>
+        </div>
+
+    </div>
+    <div class="row row-cols-2 border-top border-left border-right">
+        <div class="col-3">
+            <div class="font-weight-bold">
+                Platform
+            </div>
+        </div>
+        <div class="col-3">
+            <div>
+                {{ game?.platform }}
+            </div>
+        </div>
+
+    </div>
+    <div class="row row-cols-2 border-top border-left border-right">
+        <div class="col-3">
+            <div class="font-weight-bold">
+                Publisher
+            </div>
+        </div>
+        <div class="col-3">
+            <div>
+                {{ game?.publisher }}
+            </div>
+        </div>
+
+    </div>
+    <div class="row row-cols-2 border-top border-left border-right">
+        <div class="col-3">
+            <div class="font-weight-bold">
+                Developer
+            </div>
+        </div>
+        <div class="col-3">
+            <div>
+                {{ game?.developer }}
+            </div>
+        </div>
+
+    </div>
+    <div class="row row-cols-2 border-top border-left border-right">
+        <div class="col-3">
+            <div class="font-weight-bold">
+                Release date
+            </div>
+        </div>
+        <div class="col-3">
+            <div>
+                {{ game?.release_date }}
+            </div>
+        </div>
+
+    </div>
+    <div class="row row-cols-2 border-top border-left border-right border-bottom">
+        <div class="col-3">
+            <div class="font-weight-bold">
+                FreeToGame profile URL
+            </div>
+        </div>
+        <div class="col-9">
+            <div class="font-weight-bold">
+                <a [href]="game?.freetogame_profile_url">{{ game?.freetogame_profile_url }}</a>
+            </div>
+        </div>
+    </div>
+</div>

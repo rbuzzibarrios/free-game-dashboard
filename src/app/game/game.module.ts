@@ -6,9 +6,10 @@ import {GameRoutingModule} from "./game-routing.module"
 import {GameCardComponent} from "./components/game-card/game-card.component"
 import {GameFilterFormComponent} from "./components/game-filter-form/game-filter-form.component"
 import {ReactiveFormsModule} from "@angular/forms"
+import {GameViewPageComponent} from "./pages/game-view-page/game-view-page.component"
 
 @NgModule({
-  declarations: [GamePageComponent, GameCardComponent, GameFilterFormComponent],
+  declarations: [GamePageComponent, GameCardComponent, GameFilterFormComponent, GameViewPageComponent],
   imports: [
     CommonModule,
     CoreModule,

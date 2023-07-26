@@ -56,4 +56,8 @@ export class GameService {
         map(games => [...new Set(games.map(applyGenreMap))]),
     );
   }
+
+  getGameById(gameId: number | string) {
+    return this.http.get<Game>(`${this.getApiUrl()}game?id=${gameId}`)
+  }
 }
