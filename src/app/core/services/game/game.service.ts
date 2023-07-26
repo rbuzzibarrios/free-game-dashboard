@@ -3,14 +3,17 @@ import {HttpClient} from '@angular/common/http'
 import {Game} from "../../models/game"
 import { GameFilters } from "../../models/game-filters"
 import {map} from "rxjs"
+import {environment} from "../../../../environments/environment"
 
 @Injectable()
 export class GameService {
-
-  private proxyAuthorizeCors = 'https://cors-anywhere.herokuapp.com/';
-  private gameApiUrl = `${this.proxyAuthorizeCors}https://www.freetogame.com/api/`;
+  private gameApiUrl = environment.apiFreeGameUrl;
 
   constructor(private http: HttpClient) {
+
+    if (!environment.production) {
+      this.gameApiUrl = `${environment.proxyUrlCORSAnyWhere}${environment.apiFreeGameUrl}`
+    }
   }
 
   getApiUrl() {
